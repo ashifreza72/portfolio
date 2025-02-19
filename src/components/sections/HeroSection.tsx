@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Github, Phone, Linkedin, Download } from 'lucide-react';
+import { ArrowRight, Github, Phone, Download } from 'lucide-react';
 import Image from 'next/image';
 import { PDFViewer } from '@/components/PDFViewer';
 import { downloadResume } from '@/utils/downloadResume';
@@ -63,7 +63,7 @@ export function HeroSection() {
             </div>
 
             <h1 className='text-4xl md:text-6xl font-bold mb-6 gradient-text animate-float'>
-              Hi, I'm <span className='text-blue-400'>Md Ashif</span>
+              Hi, I&apos;m <span className='text-blue-400'>Md Ashif</span>
             </h1>
 
             <p className='text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto'>
