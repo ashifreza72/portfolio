@@ -66,9 +66,21 @@ export function HeroSection() {
               Hi, I&apos;m <span className='text-blue-400'>Md Ashif</span>
             </h1>
 
-            <p className='text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto'>
-              Let&apos;s build something amazing together!
-            </p>
+            <div className='space-y-6 mb-8'>
+              <p className='text-muted-foreground text-lg md:text-xl'>
+                A <span className='text-blue-400'>Full Stack Developer</span>{' '}
+                passionate about creating beautiful and functional web
+                applications.
+              </p>
+
+              <p className='text-muted-foreground'>
+                Specialized in building modern web solutions using{' '}
+                <span className='text-purple-400'>Next.js</span>,{' '}
+                <span className='text-blue-400'>React</span>, and{' '}
+                <span className='text-purple-400'>Node.js</span>. I love turning
+                ideas into reality through clean code and intuitive design.
+              </p>
+            </div>
 
             <div className='flex flex-col sm:flex-row gap-4'>
               <Button
@@ -96,6 +108,9 @@ export function HeroSection() {
               </div>
               <div className='glass px-4 py-2 rounded-full text-sm'>
                 🚀 Open to Opportunities
+              </div>
+              <div className='glass px-4 py-2 rounded-full text-sm'>
+                💻 3+ Years Experience
               </div>
             </div>
           </div>
