@@ -31,7 +31,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: 'LinkedIn',
-    href: 'linkedin.com/in/md-ashif-aab83b259',
+    href: 'https://www.linkedin.com/in/md-ashif-aab83b259',
     icon: Linkedin,
   },
   {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Github, Phone, Download } from 'lucide-react';
+import { ArrowRight, Github, Phone, Download, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import { PDFViewer } from '@/components/PDFViewer';
 import { downloadResume } from '@/utils/downloadResume';
@@ -58,6 +58,20 @@ export function HeroSection() {
                 >
                   <Github className='mr-2 h-4 w-4' />
                   Follow on Github
+                </a>
+              </Button>
+              <Button
+                variant='outline'
+                className='rounded-full border-blue-400/20 hover:border-blue-400/40'
+                asChild
+              >
+                <a
+                  href='https://www.linkedin.com/in/md-ashif-aab83b259'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <Linkedin className='mr-2 h-4 w-4' />
+                  Connect on LinkedIn
                 </a>
               </Button>
             </div>

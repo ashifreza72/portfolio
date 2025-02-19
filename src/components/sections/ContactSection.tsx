@@ -2,9 +2,10 @@
 
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useId } from 'react';
 
 export function ContactSection() {
+  const formId = useId();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,26 +18,27 @@ export function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const mailtoLink = `mailto:mdashifreza72@gmail.com?subject=Contact from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    try {
+      const mailtoLink = `mailto:mdashifreza72@gmail.com?subject=Contact from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+      window.location.href = mailtoLink;
 
-    window.location.href = mailtoLink;
-
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
-    setIsSubmitting(false);
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({
-      ...formData,
+    setFormData((prev) => ({
+      ...prev,
       [e.target.name]: e.target.value,
-    });
+    }));
   };
 
   return (
@@ -72,7 +74,7 @@ export function ContactSection() {
                 asChild
               >
                 <a
-                  href='linkedin.com/in/md-ashif-aab83b259'
+                  href='https://www.linkedin.com/in/md-ashif-aab83b259'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -85,13 +87,13 @@ export function ContactSection() {
                 className='border-blue-400 hover:bg-blue-400/10'
                 asChild
               >
-                <a href={`mailto:mdashifreza72@gmail.com`}>
+                <a href='mailto:mdashifreza72@gmail.com'>
                   <Mail className='h-5 w-5' />
                 </a>
               </Button>
             </div>
           </div>
-          <form onSubmit={handleSubmit} className='space-y-4'>
+          <form id={formId} onSubmit={handleSubmit} className='space-y-4'>
             <input
               type='text'
               name='name'
@@ -120,9 +122,9 @@ export function ContactSection() {
               className='w-full p-4 rounded-md glass focus:border-blue-400 transition-colors'
             />
             <Button
-              className='bg-blue-600 hover:bg-blue-700 w-full'
               type='submit'
               disabled={isSubmitting}
+              className='bg-blue-600 hover:bg-blue-700 w-full'
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
