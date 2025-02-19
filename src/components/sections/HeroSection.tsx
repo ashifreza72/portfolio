@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Github, Phone, FileText, Download } from 'lucide-react';
+import { ArrowRight, Github, Phone, Linkedin, Download } from 'lucide-react';
 import Image from 'next/image';
 import { PDFViewer } from '@/components/PDFViewer';
 import { downloadResume } from '@/utils/downloadResume';
@@ -66,10 +66,8 @@ export function HeroSection() {
               Hi, I'm <span className='text-blue-400'>Md Ashif</span>
             </h1>
 
-            <p className='text-xl text-muted-foreground mb-8'>
-              A passionate full-stack developer crafting beautiful digital
-              experiences. Specialized in building modern web applications with
-              cutting-edge technologies.
+            <p className='text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto'>
+              Let&apos;s build something amazing together!
             </p>
 
             <div className='flex flex-col sm:flex-row gap-4'>

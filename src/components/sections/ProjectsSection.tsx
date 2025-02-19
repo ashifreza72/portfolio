@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, Link as LinkIcon } from 'lucide-react';
+import { Github, Link as LinkIcon } from 'lucide-react';
 import Image from 'next/image';
 
 export function ProjectsSection() {
@@ -93,7 +93,7 @@ export function ProjectsSection() {
           </h2>
 
           <p className='text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed'>
-            Here are some of the projects I've worked on.{' '}
+            Here are some of the projects I&apos;ve worked on.{' '}
             <span className='text-blue-400'>Each project</span> is crafted with{' '}
             <span className='text-purple-400'>attention to detail</span> and{' '}
             <span className='text-blue-400'>best practices</span>.

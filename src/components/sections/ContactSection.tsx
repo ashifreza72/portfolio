@@ -46,10 +46,9 @@ export function ContactSection() {
         <h2 className='text-3xl font-bold mb-12 gradient-text'>Get In Touch</h2>
         <div className='grid md:grid-cols-2 gap-12'>
           <div>
-            <p className='text-muted-foreground mb-6'>
-              I'm always open to new opportunities and interesting projects.
-              Feel free to reach out if you'd like to collaborate or just say
-              hi!
+            <p className='text-muted-foreground mb-8'>
+              I&apos;m currently available for freelance work. Let&apos;s build
+              something great together!
             </p>
             <div className='flex gap-4'>
               <Button

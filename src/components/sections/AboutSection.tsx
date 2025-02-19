@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Download } from 'lucide-react';
 import Image from 'next/image';
 import { downloadResume } from '@/utils/downloadResume';
-import { Icon } from '@iconify/react';
 import { useEffect, useState, useRef } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -164,8 +163,8 @@ export function AboutSection() {
           {/* Content Section */}
           <div className='space-y-6'>
             <p className='text-lg text-muted-foreground leading-relaxed'>
-              <span className='text-blue-400 font-semibold'>Hi there!</span> I'm
-              a{' '}
+              <span className='text-blue-400 font-semibold'>Hi there!</span>{' '}
+              I&apos;m a{' '}
               <span className='text-purple-400 font-semibold'>
                 Full Stack Developer
               </span>{' '}
